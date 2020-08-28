@@ -1,6 +1,9 @@
 # Using aws cli with multi-factor authentication (MFA)
 AWS has a great console where it is easy to use multi-factor authentication (MFA) after it has been configured for the user. With this tutorial you can also use MFA with aws commandline tools. To do this AWS uses Secure Token Service, which allows assume-role with MFA. This process helps create a much more secure way to use Access Keys on a remote machine. Even if the key is compromised, it is almost impossible to use without the MFA device and the knowledge of the role that the IAM user is allowed to access using the access key. To take advantage of this process follow these steps:
 
+### Creating User
+This section is based on the [Policies for Delegating Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_policy-examples.html) from AWS.
+
 ### Create IAM Policy 
 Create an IAM policy and give it the desired access permissions. In this example I have given the user access to write to a s3 bucket. 
 
